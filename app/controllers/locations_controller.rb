@@ -1,5 +1,7 @@
 class LocationsController < ApplicationController
 
+  before_action :authenticate_user!, only: [:new, :create, :show]
+
   def index
     if params[:search].present?
       @locations = Location.near(params[:search], 50, :order => :distance)

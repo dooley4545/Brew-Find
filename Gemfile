@@ -31,11 +31,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'devise'
 
 gem 'geocoder'
 gem 'gmaps4rails'
 
-gem 'brewery_db'
+gem 'brewerydb', '~> 0.0.4'
+
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
