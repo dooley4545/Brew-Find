@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
   has_many :brewers
-  has_many :comments
+  has_many :beers
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

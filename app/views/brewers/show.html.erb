@@ -22,6 +22,15 @@
   <%= @brewer.longitude %>
 </p>
 
+<table>
+  <% @brewer.beers.each do |beer| %>
+    <tr>
+      <td><%= beer.name %></td>
+    </tr>
+  <% end %>
+</table>
+<%= link_to "Add a beer", new_beer_path %>
+
 
 <!-- <h3>Nearby locations</h3>
 <ul>
@@ -33,4 +42,5 @@
 <p>
   <%= link_to "Edit", edit_brewer_path(@brewer) %> |
   <%= link_to "View All", brewers_path %>
+
 </p>
