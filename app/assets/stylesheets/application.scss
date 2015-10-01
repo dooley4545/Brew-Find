@@ -15,3 +15,20 @@
 // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body { padding-top: 51px; }
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+}
+
+.sidebar {
+  background-color: #000000;
+  position: fixed;
+  z-index: 2;
+  height: 100%;
+}
+
+.content {
+  padding-top: 19px;
+}

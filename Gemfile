@@ -36,6 +36,8 @@ gem 'devise'
 gem 'geocoder'
 gem 'gmaps4rails'
 
+gem 'kaminari'
+
 gem 'brewerydb', '~> 0.0.4'
 
 gem 'bootstrap-sass', '~> 3.2.0'

@@ -1,0 +1,16 @@
+<div class="search">
+  <h5>Search For Breweries</h5>
+    <%= form_tag("/search", method: :get, class: " navbar-form") do  %>
+      <%= text_field_tag :search, params[:search], placeholder: "Zipcode...", class: "form-control" %>
+      <%= select_tag :miles, options_for_select([["within 5 miles", "5"], ["within 10 miles", "10"], ["within 20 miles", "20"]]), class: "form-control" %>
+      <%= submit_tag "Find Breweries", name: nil, :class => "btn btn-info" %>
+    <% end %>
+</div>
+<ul class="nav nav-stacked">
+  <li>
+    <%= link_to "View all breweries", brewers_path %>
+  </li>
+  <li>
+    <%= link_to "Add New Brewery", new_brewer_path %>
+  </li>
+</ul>

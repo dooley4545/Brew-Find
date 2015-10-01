@@ -1,0 +1,36 @@
+<div class="banner">
+
+</div>
+
+<h1><%= @brewer.name %></h1>
+
+<p>
+  <strong>Address</strong><br>
+  <%= @brewer.address %><br>
+  <%= @brewer.city %>,
+  <%= @brewer.state %>
+  <%= @brewer.zip %>
+</p>
+
+<p>
+  <strong>description</strong>
+  <%= @brewer.description %>
+</p>
+
+<p>
+  <strong>Longitude</strong>
+  <%= @brewer.longitude %>
+</p>
+
+
+<!-- <h3>Nearby locations</h3>
+<ul>
+<% for location in @brewer.nearbys(10) %>
+  <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
+<% end %>
+</ul> -->
+
+<p>
+  <%= link_to "Edit", edit_brewer_path(@brewer) %> |
+  <%= link_to "View All", brewers_path %>
+</p>

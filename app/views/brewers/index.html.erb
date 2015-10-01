@@ -1,0 +1,33 @@
+<h1>Registered Breweries</h1>
+
+<%= paginate @brewers %>
+
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Address</th>
+    <th>Website</th>
+  </thead> 
+  <tbody>
+    <% @brewers.each do |brewer| %>
+      <tr>
+        <td>
+          <%= link_to brewer.name, brewer_path(brewer)%>
+        </td>
+        <td>
+          <%= brewer.description %>
+        </td>
+        <td>
+          <%= brewer.address %>
+        </td>
+        <td>
+          <%= brewer.website %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<p><%= link_to "Add New Brewery", new_brewer_path %></p>
